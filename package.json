@@ -1,0 +1,10 @@
+{
+	"scripts": {
+		"build": "uglifyjs bookmarklet.js -c -m -o bookmarklet.min.js",
+		"lint": "eslint --report-unused-disable-directives ."
+	},
+	"devDependencies": {
+		"eslint-config-wikimedia": "^0.14.0",
+		"uglify-js": "^3.6.0"
+	}
+}

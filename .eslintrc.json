@@ -1,0 +1,9 @@
+{
+	"extends": [
+		"wikimedia/client"
+	],
+	"globals": {
+		"mw": false,
+		"OO": false
+	}
+}
