@@ -4,7 +4,7 @@
 		"lint": "eslint --report-unused-disable-directives ."
 	},
 	"devDependencies": {
-		"eslint-config-wikimedia": "^0.14.0",
+		"eslint-config-wikimedia": "^0.14.1",
 		"uglify-js": "^3.6.0"
 	}
 }
