@@ -6,6 +6,6 @@
 	</head>
 	<body>
 		<p>Drag the link below onto your bookmarks tookbar:</p>
-		<p><a href='javascript:!function(){function i(){location.href="https://meta.wikimedia.org/wiki/Special:UrlShortener?url="+encodeURIComponent(location.href)}window.mw&&mw.loader?mw.loader.using(["oojs-ui-windows","mediawiki.widgets","mediawiki.ForeignApi"]).then(function(){new mw.ForeignApi("https://meta.wikimedia.org/w/api.php").post({action:"shortenurl",url:location.href}).then(function(i){OO.ui.alert(new mw.widgets.CopyTextLayout({copyText:i.shortenurl.shorturl}).$element)},i)},i):i()}();'>w.wiki<a></p>
+		<p><a href='javascript:!function(){function i(){location.href="https://meta.wikimedia.org/wiki/Special:UrlShortener?url="+encodeURIComponent(location.href)}window.mw&&mw.loader?mw.loader.using(["oojs-ui-windows","mediawiki.widgets","mediawiki.ForeignApi"]).then(function(){new mw.ForeignApi("https://meta.wikimedia.org/w/api.php").post({action:"shortenurl",url:location.href}).then(function(i){var o=new mw.widgets.CopyTextLayout({copyText:i.shortenurl.shorturl});OO.ui.alert(o.$element),setTimeout(function(){o.button.focus()},500)},i)},i):i()}();'>w.wiki<a></p>
 	</body>
 </html>

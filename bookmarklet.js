@@ -8,9 +8,14 @@
 				action: 'shortenurl',
 				url: location.href
 			} ).then( function ( data ) {
-				OO.ui.alert(
-					new mw.widgets.CopyTextLayout( { copyText: data.shortenurl.shorturl } ).$element
-				);
+				var copyLayout = new mw.widgets.CopyTextLayout( {
+					copyText: data.shortenurl.shorturl
+				} );
+				OO.ui.alert( copyLayout.$element );
+				// HACK: Wait for setup and ready processes to complete
+				setTimeout( function () {
+					copyLayout.button.focus();
+				}, 500 );
 			}, shorturlredir );
 		}, shorturlredir );
 	} else {
