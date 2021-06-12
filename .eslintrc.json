@@ -1,9 +1,6 @@
 {
 	"extends": [
-		"wikimedia/client"
-	],
-	"globals": {
-		"mw": false,
-		"OO": false
-	}
+		"wikimedia/client",
+		"wikimedia/mediawiki"
+	]
 }
