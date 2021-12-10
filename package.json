@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"build": "uglifyjs bookmarklet.js -c -m -o bookmarklet.min.js",
+		"build": "uglifyjs src/bookmarklet.js -c -m -o src/bookmarklet.min.js && node build/index.js",
 		"test": "eslint ."
 	},
 	"devDependencies": {

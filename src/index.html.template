@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>w.wiki bookmarklet</title>
+	</head>
+	<body>
+		<p>Drag the link below onto your bookmarks toolbar:</p>
+		<p><a href='javascript:void(__BOOKMARKLET__);'>w.wiki<a></p>
+	</body>
+</html>
