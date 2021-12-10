@@ -6,6 +6,6 @@
 	</head>
 	<body>
 		<p>Drag the link below onto your bookmarks toolbar:</p>
-		<p><a href='javascript:void(function(){function i(){location.href="https://meta.wikimedia.org/wiki/Special:UrlShortener?url="+encodeURIComponent(location.href)}window.mw&&mw.loader?mw.loader.using(["oojs-ui-windows","mediawiki.widgets","mediawiki.ForeignApi"]).then(function(){new mw.ForeignApi("https://meta.wikimedia.org/w/api.php").post({action:"shortenurl",url:location.href}).then(function(i){var o=new mw.widgets.CopyTextLayout({copyText:i.shortenurl.shorturl});OO.ui.alert(o.$element),setTimeout(function(){o.button.focus()},500)},i)},i):i()}());'>w.wiki<a></p>
+		<p><a href='javascript:void(function(){var i="https://meta.wikimedia.org/",t=location,e=t.href,o="shortenurl";function n(){t.href=i+"wiki/Special:UrlShortener?url="+encodeURIComponent(e)}try{mw.loader.using(["oojs-ui-windows","mediawiki.widgets","mediawiki.ForeignApi"]).then(function(){new mw.ForeignApi(i+"w/api.php").post({action:o,url:e}).then(function(i){i=new mw.widgets.CopyTextLayout({copyText:i[o].shorturl});OO.ui.alert(i.$element),setTimeout(i.button.focus.bind(i.button),500)},n)},n)}catch(i){n()}}());'>w.wiki<a></p>
 	</body>
 </html>
