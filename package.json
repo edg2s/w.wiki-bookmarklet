@@ -4,7 +4,7 @@
 		"test": "eslint ."
 	},
 	"devDependencies": {
-		"eslint-config-wikimedia": "^0.21.0",
-		"uglify-js": "^3.14.4"
+		"eslint-config-wikimedia": "^0.22.1",
+		"uglify-js": "^3.15.5"
 	}
 }
