@@ -1,12 +1,7 @@
-( function () {
-	// Create local variables to help the minimiser
-	var domain = 'https://meta.wikimedia.org/',
-		loc = location,
-		href = loc.href,
-		shortenurl = 'shortenurl';
-
+// Create local variables to help the minimiser
+( function ( domain, loc, shortenurl ) {
 	function shorturlredir() {
-		loc.href = domain + 'wiki/Special:UrlShortener?url=' + encodeURIComponent( href );
+		loc.href = domain + 'wiki/Special:UrlShortener?url=' + encodeURIComponent( loc.href );
 	}
 
 	try {
@@ -14,7 +9,7 @@
 		mw.loader.using( [ 'oojs-ui-windows', 'mediawiki.widgets', 'mediawiki.ForeignApi' ] ).then( function () {
 			( new mw.ForeignApi( domain + 'w/api.php' ) ).post( {
 				action: shortenurl,
-				url: href
+				url: loc.href
 			} ).then( function ( data ) {
 				var copyLayout = new mw.widgets.CopyTextLayout( {
 					copyText: data[ shortenurl ].shorturl
@@ -27,5 +22,4 @@
 	} catch ( e ) {
 		shorturlredir();
 	}
-
-}() );
+}( 'https://meta.wikimedia.org/', location, 'shortenurl' ) );
