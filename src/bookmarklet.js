@@ -1,7 +1,9 @@
 // Create local variables to help the minimiser
 ( function ( domain, loc, shortenurl ) {
 	function shorturlredir() {
-		loc.href = domain + 'wiki/Special:UrlShortener?url=' + encodeURIComponent( loc.href );
+		// Setting a copy of location (`loc`) to the URL string would
+		// work in Firefox, but not Chrome.
+		loc.href = domain + 'wiki/Special:UrlShortener?url=' + encodeURIComponent( loc );
 	}
 
 	try {
@@ -9,7 +11,8 @@
 		mw.loader.using( [ 'oojs-ui-windows', 'mediawiki.widgets', 'mediawiki.ForeignApi' ] ).then( function () {
 			( new mw.ForeignApi( domain + 'w/api.php' ) ).post( {
 				action: shortenurl,
-				url: loc.href
+				// eslint-disable-next-line no-implicit-coercion
+				url: loc + ''
 			} ).then( function ( data ) {
 				var copyLayout = new mw.widgets.CopyTextLayout( {
 					copyText: data[ shortenurl ].shorturl
