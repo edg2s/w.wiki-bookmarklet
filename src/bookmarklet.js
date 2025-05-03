@@ -30,7 +30,7 @@
 				copyLayout.$element.append(
 					$( '<a>' ).css( { textAlign: 'center', display: 'block' } )
 						.append(
-							$( '<img>' ).attr( 'src', dataUrl )
+							$( '<img>' ).attr( 'src', dataUrl ).css( 'width', '100%' )
 						)
 						.attr( {
 							href: dataUrl,
@@ -38,7 +38,7 @@
 							download: 'QRCode.svg'
 						} )
 				);
-				OO.ui.alert( copyLayout.$element, { size: 'medium' } );
+				OO.ui.alert( copyLayout.$element );
 				// HACK: Wait for setup and ready processes to complete
 				setTimeout( copyLayout.button.focus.bind( copyLayout.button ), 500 );
 			}, shorturlredir );
