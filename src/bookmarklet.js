@@ -8,13 +8,13 @@
 
 	try {
 		// Rather than check if mw/mw.loader exists, just use a try block (saves bytes)
-		mw.loader.using( [ 'oojs-ui-windows', 'mediawiki.widgets', 'mediawiki.ForeignApi' ] ).then( function () {
+		mw.loader.using( [ 'oojs-ui-windows', 'mediawiki.widgets', 'mediawiki.ForeignApi' ] ).then( () => {
 			( new mw.ForeignApi( domain + 'w/api.php' ) ).post( {
 				action: shortenurl,
 				// eslint-disable-next-line no-implicit-coercion
 				url: loc + ''
-			} ).then( function ( data ) {
-				var copyLayout = new mw.widgets.CopyTextLayout( {
+			} ).then( ( data ) => {
+				const copyLayout = new mw.widgets.CopyTextLayout( {
 					copyText: data[ shortenurl ].shorturl
 				} );
 				OO.ui.alert( copyLayout.$element );
