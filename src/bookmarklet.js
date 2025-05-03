@@ -25,7 +25,7 @@
 				const copyLayout = new mw.widgets.CopyTextLayout( {
 					copyText: data[ 0 ][ shortenurl ].shorturl
 				} );
-				const encodedSvg = encodeURIComponent( data[ 1 ][ shortenurl ].qrcode ).replace( /'/g, '%27' ).replace( /"/g, '%22' );
+				const encodedSvg = encodeURIComponent( data[ 1 ][ shortenurl ].qrcode );
 				const dataUrl = `data:image/svg+xml;charset=utf-8,${ encodedSvg }`;
 				copyLayout.$element.append(
 					$( '<a>' ).css( { textAlign: 'center', display: 'block' } )
