@@ -1,6 +1,8 @@
 {
 	"extends": [
-		"wikimedia/client",
+		"wikimedia/client/common",
+		"wikimedia/language/es2018",
+		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	]
 }

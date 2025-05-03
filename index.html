@@ -6,6 +6,6 @@
 	</head>
 	<body>
 		<p>Drag the link below onto your bookmarks toolbar:</p>
-		<p><a href='javascript:void(((e,i,t)=>{function o(){i.href=e+"wiki/Special:UrlShortener?url="+encodeURIComponent(i)}try{mw.loader.using(["oojs-ui-windows","mediawiki.widgets","mediawiki.ForeignApi"]).then(()=>{new mw.ForeignApi(e+"w/api.php").post({action:t,url:i+""}).then(e=>{e=new mw.widgets.CopyTextLayout({copyText:e[t].shorturl});OO.ui.alert(e.$element),setTimeout(e.button.focus.bind(e.button),500)},o)},o)}catch(e){o()}})("https://meta.wikimedia.org/",location,"shortenurl"));'>w.wiki<a></p>
+		<p><a href='javascript:void(((i,o,n)=>{function r(){o.href=i+"wiki/Special:UrlShortener?url="+encodeURIComponent(o)}try{mw.loader.using(["oojs-ui-windows","mediawiki.widgets","mediawiki.ForeignApi"]).then(()=>{var e=new mw.ForeignApi(i+"w/api.php"),t={action:n,url:o+""};Promise.all([e.post(t),e.post({...t,qrcode:1})]).then(e=>{var t=new mw.widgets.CopyTextLayout({copyText:e[0][n].shorturl});t.$element.append($("<div>").html(e[1][n].qrcode)),OO.ui.alert(t.$element),setTimeout(t.button.focus.bind(t.button),500)},r)},r)}catch(e){r()}})("https://meta.wikimedia.org/",location,"shortenurl"));'>w.wiki<a></p>
 	</body>
 </html>
