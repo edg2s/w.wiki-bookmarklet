@@ -34,7 +34,7 @@
 						)
 						.attr( {
 							href: dataUrl,
-							title: 'Download'
+							title: 'Download',
 							download: 'QRCode.svg'
 						} )
 				);

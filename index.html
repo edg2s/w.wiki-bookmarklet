@@ -6,6 +6,6 @@
 	</head>
 	<body>
 		<p>Drag the link below onto your bookmarks toolbar:</p>
-		<p><a href='javascript:void(((i,o,n)=>{function r(){o.href=i+"wiki/Special:UrlShortener?url="+encodeURIComponent(o)}try{mw.loader.using(["oojs-ui-windows","mediawiki.widgets","mediawiki.ForeignApi"]).then(()=>{var e=new mw.ForeignApi(i+"w/api.php"),t={action:n,url:o+""};Promise.all([e.post(t),e.post({...t,qrcode:1})]).then(e=>{var t=new mw.widgets.CopyTextLayout({copyText:e[0][n].shorturl});t.$element.append($("<div>").html(e[1][n].qrcode)),OO.ui.alert(t.$element),setTimeout(t.button.focus.bind(t.button),500)},r)},r)}catch(e){r()}})("https://meta.wikimedia.org/",location,"shortenurl"));'>w.wiki<a></p>
+		<p><a href='javascript:void(!function(e,t,o){function i(){t.href=e+"wiki/Special:UrlShortener?url="+encodeURIComponent(t)}try{mw.loader.using(["oojs-ui-windows","mediawiki.widgets","mediawiki.ForeignApi"]).then((()=>{const n=new mw.ForeignApi(e+"w/api.php"),a={action:o,url:t+""};Promise.all([n.post(a),n.post({...a,qrcode:1})]).then((e=>{const t=new mw.widgets.CopyTextLayout({copyText:e[0][o].shorturl}),i=`data:image/svg+xml;charset=utf-8,${encodeURIComponent(e[1][o].qrcode).replace(/'/g,"%27").replace(/"/g,"%22")}`;t.$element.append($("<a>").css({textAlign:"center",display:"block"}).append($("<img>").attr("src",i)).attr({href:i,title:"Download",download:"QRCode.svg"})),OO.ui.alert(t.$element,{size:"medium"}),setTimeout(t.button.focus.bind(t.button),500)}),i)}),i)}catch(e){i()}}("https://meta.wikimedia.org/",location,"shortenurl"));'>w.wiki<a></p>
 	</body>
 </html>
